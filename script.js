@@ -1,8 +1,8 @@
 'use strict';
 
-const APP_PATH = `/`; // https://ƒ†[ƒU[–¼.github.io/<ƒRƒR> or ƒ‹[ƒgƒpƒX—˜—p‚È‚ç`/`‚¾‚¯‚ÅOK
+const APP_PATH = `/smart_ibd`; // https://ãƒ¦ãƒ¼ã‚¶ãƒ¼å.github.io/<ã‚³ã‚³> or ãƒ«ãƒ¼ãƒˆãƒ‘ã‚¹åˆ©ç”¨ãªã‚‰`/`ã ã‘ã§OK
 let auth0 = null;
-const fetchAuthConfig = () => fetch("auth_config.json"); // auth_config.json“Ç‚İ‚İ
+const fetchAuthConfig = () => fetch("auth_config.json"); // auth_config.jsonèª­ã¿è¾¼ã¿
 
 const configureClient = async () => {
   const response = await fetchAuthConfig();
@@ -58,7 +58,7 @@ const updateUI = async () => {
       await auth0.getUser()
     );
 
-    //ƒvƒƒt‰æ‘œ
+    //ãƒ—ãƒ­ãƒ•ç”»åƒ
     const profile = await auth0.getUser();
     document.getElementById("ipt-user-profile-image").src = profile.picture;
 
